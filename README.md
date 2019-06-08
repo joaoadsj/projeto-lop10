@@ -91,19 +91,19 @@ if ( keyIsDown(CONTROL) ){
 }
 if ( keyIsDown(RIGHT_ARROW) )
   {
-    x=x+4
+    x=x+5
   }
    if ( keyIsDown(LEFT_ARROW) )
   {
-    x=x-4
+    x=x-5
   }
   if ( keyIsDown(UP_ARROW) )
   {
-    y=y-4
+    y=y-5
   }
     if ( keyIsDown(DOWN_ARROW) )
   {
-    y=y+4
+    y=y+5
   }
    ellipse(xd,yd,1*raioD,1*raioD)
   if ( keyIsDown(CONTROL) && ! estadoDisparo)
@@ -115,32 +115,32 @@ if ( keyIsDown(RIGHT_ARROW) )
 
 if( estadoDisparo ) {
   ellipse(xd,yd,1*raioD,1*raioD)
-  xd=xd+10;
+  xd=xd+13;
 }
   if(xd > 400)
   {
     estadoDisparo=false
   }
-  if(x!=10 || y!=200){
-  vxi[1]=vxi[1]-1}
-   if(x!=10 || y!=200){
-  vxi[2]=vxi[2]-1}
-   if(x!=10 || y!=200){
-  vxi[3]=vxi[3]-1}
-   if(x!=10 || y!=200){
-  vxi[4]=vxi[4]-1}
-   if(x!=10 || y!=200){
-  vxi[5]=vxi[5]-1}
-   if(x!=10 || y!=200){
-  vxi[6]=vxi[6]-1}
-   if(x!=10 || y!=200){
-  vxi[7]=vxi[7]-1}
-   if(x!=10 || y!=200){
-  vxi[8]=vxi[8]-1}
-   if(x!=10 || y!=200){
-  vxi[9]=vxi[9]-1}
-   if(x!=10 || y!=200){
-  vxi[10]=vxi[10]-1}
+  if(x!=20 || y!=200){
+  vxi[1]=vxi[1]-2}
+   if(x!=20 || y!=200){
+  vxi[2]=vxi[2]-2}
+   if(x!=20 || y!=200){
+  vxi[3]=vxi[3]-2}
+   if(x!=20 || y!=200){
+  vxi[4]=vxi[4]-2}
+   if(x!=20 || y!=200){
+  vxi[5]=vxi[5]-2}
+   if(x!=20 || y!=200){
+  vxi[6]=vxi[6]-2}
+   if(x!=20 || y!=200){
+  vxi[7]=vxi[7]-2}
+   if(x!=20 || y!=200){
+  vxi[8]=vxi[8]-2}
+   if(x!=20 || y!=200){
+  vxi[9]=vxi[9]-2}
+   if(x!=20 || y!=200){
+  vxi[10]=vxi[10]-2}
  
   if(dist(x,y,vxi[1],vyi[1])< raioO + raioP)
   {
@@ -271,16 +271,16 @@ if( estadoDisparo ) {
    
    for(i=1;i<qtdObjetosn2;i++){
      ellipse(xin2[i],yin2[i],20,20)}
-   yin2[1]=yin2[1]-13
-    yin2[2]=yin2[2]-3
-     yin2[3]=yin2[3]-8
-      yin2[4]=yin2[4]-5
-       yin2[5]=yin2[5]-3
-        yin2[6]=yin2[6]-13
-         yin2[7]=yin2[7]-4
-          yin2[8]=yin2[8]-8
-           yin2[9]=yin2[9]-4
-            yin2[10]=yin2[10]-3
+   yin2[1]=yin2[1]-15
+    yin2[2]=yin2[2]-5
+     yin2[3]=yin2[3]-10
+      yin2[4]=yin2[4]-7
+       yin2[5]=yin2[5]-5
+        yin2[6]=yin2[6]-15
+         yin2[7]=yin2[7]-6
+          yin2[8]=yin2[8]-10
+           yin2[9]=yin2[9]-6
+            yin2[10]=yin2[10]-5
    if(yin2[1]<50){
      yin2[1]=400}
      if(yin2[1]<50){
@@ -447,12 +447,20 @@ if(xd>20){
     tela=3}
 }
   if(tela==5){
-    background(255, 221, 0);
+    background(255, 10, 0);
     textSize(30);
     text("PARABENS,VOCE GANHOU!!!!",10,200)
     textSize(10)
   }
 }
+
+  
+  
+  
+  
+  
+  
+  
 
   
   
