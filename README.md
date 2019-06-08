@@ -33,7 +33,7 @@ for(i=0 ; i<4 ;i++){
  imgsAtirando[i]=loadImage("Cowboy4_shoot_"+i+".png");} 
   for(i=0 ; i<4 ;i++){
  imgsAndando[i]=loadImage("Cowboy4_walk without gun_"+i+".png");} 
-  imgInimigo=loadImage("2D_KNIGHT__Idle_000.png")
+
 }    
 function setup(){
   frameRate(30)
@@ -54,7 +54,7 @@ for(i=0;i<=qtdObjetos;i++){
   textSize(13)
   text('No nivel 1 o objetivo do jogo é eliminar todos os alvos antes que eles cheguem\n do outro lado da tela. ',10,100);
   text('No nivel 2 o objetivo é apenas chegar ao outro lado.',10,150)
-   text('No nivel 3 voce tem que deixar a vida do inimigo em zero,mas se o tempo chegar \n em 18 segundos voce perde,além disso quanto mais no centro voce acertalo mais \n pontos de vida ele ira perder.',10,190) 
+   text('No nivel 3 voce tem que deixar a vida do inimigo em zero,mas se o tempo chegar \n em 10 segundos voce perde,além disso quanto mais no centro voce acertalo mais \n pontos de vida ele ira perder.',10,190) 
   text('Aperte ENTER para ir ao inicio do jogo.',10,330)
    text('Voce pode atirar usando CTRL e se movimentar usando as setas do teclado.\n boa sorte.',10,250)
   if ( keyIsDown(ENTER) ){
@@ -422,6 +422,7 @@ fill(0,0,0)
   }
 
 if( estadoDisparo ) {
+  fill(242, 9, 9)
   ellipse(xd,yd,1*raioD,1*raioD)
   xd=xd+10;
 }
@@ -437,6 +438,7 @@ if( estadoDisparo ) {
   contFrame++;
   if(contFrame>3){
     contFrame=0}}
+  fill(242, 9, 9)
 ellipse(xif,yif,1*raioIF,3*raioIF)
 if(xd>20){
   yif=yif+5}
@@ -447,7 +449,7 @@ if(xd>20){
   if(vidasif<=0){
     tela=5
 }
-  if(tempo>1800){
+  if(tempo>1000){
     tela=3}
 }
   if(tela==5){
@@ -457,8 +459,6 @@ if(xd>20){
     textSize(10)
   }
 }
-  
-  
   
   
   
