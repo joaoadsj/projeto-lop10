@@ -125,25 +125,25 @@ if( estadoDisparo ) {
     estadoDisparo=false
   }
   if(x!=20 || y!=200){
-  vxi[1]=vxi[1]-2}
+  vxi[1]=vxi[1]-1}
    if(x!=20 || y!=200){
-  vxi[2]=vxi[2]-2}
+  vxi[2]=vxi[2]-1}
    if(x!=20 || y!=200){
-  vxi[3]=vxi[3]-2}
+  vxi[3]=vxi[3]-1}
    if(x!=20 || y!=200){
-  vxi[4]=vxi[4]-2}
+  vxi[4]=vxi[4]-1}
    if(x!=20 || y!=200){
-  vxi[5]=vxi[5]-2}
+  vxi[5]=vxi[5]-1}
    if(x!=20 || y!=200){
-  vxi[6]=vxi[6]-2}
+  vxi[6]=vxi[6]-1}
    if(x!=20 || y!=200){
-  vxi[7]=vxi[7]-2}
+  vxi[7]=vxi[7]-1}
    if(x!=20 || y!=200){
-  vxi[8]=vxi[8]-2}
+  vxi[8]=vxi[8]-1}
    if(x!=20 || y!=200){
-  vxi[9]=vxi[9]-2}
+  vxi[9]=vxi[9]-1}
    if(x!=20 || y!=200){
-  vxi[10]=vxi[10]-2}
+  vxi[10]=vxi[10]-1}
  
   if(dist(x,y,vxi[1],vyi[1])< raioO + raioP)
   {
