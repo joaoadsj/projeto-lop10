@@ -39,8 +39,8 @@ function setup(){
   frameRate(30)
   createCanvas(500,400); 
 for(i=0;i<=qtdObjetos;i++){
-  vxi[i]=random(200,400)
-  vyi[i]=random(50,400)
+  vxi[i]=random(280,400)
+  vyi[i]=random(90,390)
 } 
  for(i=1;i<qtdObjetosn2;i++){
      xin2[i]=random(50,400)
@@ -125,25 +125,25 @@ if( estadoDisparo ) {
     estadoDisparo=false
   }
   if(x!=20 || y!=200){
-  vxi[1]=vxi[1]-1}
+  vxi[1]=vxi[1]-2}
    if(x!=20 || y!=200){
-  vxi[2]=vxi[2]-1}
+  vxi[2]=vxi[2]-2}
    if(x!=20 || y!=200){
-  vxi[3]=vxi[3]-1}
+  vxi[3]=vxi[3]-2}
    if(x!=20 || y!=200){
-  vxi[4]=vxi[4]-1}
+  vxi[4]=vxi[4]-2}
    if(x!=20 || y!=200){
-  vxi[5]=vxi[5]-1}
+  vxi[5]=vxi[5]-2}
    if(x!=20 || y!=200){
-  vxi[6]=vxi[6]-1}
+  vxi[6]=vxi[6]-2}
    if(x!=20 || y!=200){
-  vxi[7]=vxi[7]-1}
+  vxi[7]=vxi[7]-2}
    if(x!=20 || y!=200){
-  vxi[8]=vxi[8]-1}
+  vxi[8]=vxi[8]-2}
    if(x!=20 || y!=200){
-  vxi[9]=vxi[9]-1}
+  vxi[9]=vxi[9]-2}
    if(x!=20 || y!=200){
-  vxi[10]=vxi[10]-1}
+  vxi[10]=vxi[10]-2}
  
   if(dist(x,y,vxi[1],vyi[1])< raioO + raioP)
   {
@@ -274,12 +274,12 @@ if( estadoDisparo ) {
    
    for(i=1;i<qtdObjetosn2;i++){
      ellipse(xin2[i],yin2[i],20,20)}
-   yin2[1]=yin2[1]-18
+   yin2[1]=yin2[1]-16
     yin2[2]=yin2[2]-8
      yin2[3]=yin2[3]-11
       yin2[4]=yin2[4]-8
        yin2[5]=yin2[5]-8
-        yin2[6]=yin2[6]-18
+        yin2[6]=yin2[6]-16
          yin2[7]=yin2[7]-8
           yin2[8]=yin2[8]-11
            yin2[9]=yin2[9]-8
@@ -387,13 +387,14 @@ if(tela==4){
   nivel=3
   tempo++
   x=30
-background(148, 251, 255)
+background(45, 145, 137)
+fill(0,0,0)
   textSize(20)
   text('vidas:'+vidas,10,20)
   text('nivel:'+nivel,10,40)
-  fill=(255, 0, 0)
   text('vidas do inimigo:'+vidasif,300,20)
   text('tempo:'+tempo,10,400)
+  fill(45, 145, 137)
   ellipse(x,y,2*raioP,2*raioP)
     anima=imgsAndando[contFrame];
   noStroke()
