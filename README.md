@@ -1,9 +1,9 @@
+//etapa10
 var imgsAndando=[]
 var anima;
 var imgsAtirando=[]
 var contFrame = 0;
 var paraFrames=0;
-var raioP=10
 var estadoDisparo = false;
 var raioD=5
 var tempo=0
@@ -22,7 +22,7 @@ var vxi=[]
 var vyi=[]
 var qtdObjetos=10
 var raioO=15
-var raioP=5
+var raioP=20
 var x=20
 var y=200
 var xd
@@ -33,17 +33,18 @@ for(i=0 ; i<4 ;i++){
  imgsAtirando[i]=loadImage("Cowboy4_shoot_"+i+".png");} 
   for(i=0 ; i<4 ;i++){
  imgsAndando[i]=loadImage("Cowboy4_walk without gun_"+i+".png");} 
-                           }
+  imgInimigo=loadImage("2D_KNIGHT__Idle_000.png")
+}    
 function setup(){
   frameRate(30)
   createCanvas(500,400); 
 for(i=0;i<=qtdObjetos;i++){
-  vxi[i]=random(250,400)
+  vxi[i]=random(200,400)
   vyi[i]=random(50,400)
 } 
  for(i=1;i<qtdObjetosn2;i++){
      xin2[i]=random(50,400)
-  yin2[i]=random(50,400)}
+  yin2[i]=random(50,350)}
 }
  function draw() {
  if(tela == 1){
@@ -53,7 +54,7 @@ for(i=0;i<=qtdObjetos;i++){
   textSize(13)
   text('No nivel 1 o objetivo do jogo é eliminar todos os alvos antes que eles cheguem\n do outro lado da tela. ',10,100);
   text('No nivel 2 o objetivo é apenas chegar ao outro lado.',10,150)
-   text('No nivel 3 voce tem que deixar a vida do inimigo em zero,mas se o tempo chegar \n em 40 segundos voce perde,além disso quanto mais no centro voce acertalo mais \n pontos de vida ele ira perder.',10,190) 
+   text('No nivel 3 voce tem que deixar a vida do inimigo em zero,mas se o tempo chegar \n em 18 segundos voce perde,além disso quanto mais no centro voce acertalo mais \n pontos de vida ele ira perder.',10,190) 
   text('Aperte ENTER para ir ao inicio do jogo.',10,330)
    text('Voce pode atirar usando CTRL e se movimentar usando as setas do teclado.\n boa sorte.',10,250)
   if ( keyIsDown(ENTER) ){
@@ -61,7 +62,7 @@ for(i=0;i<=qtdObjetos;i++){
   }
 }
 if(tela==2){
-  background(100);
+  background(79, 73, 73);
    textSize(19);
   text('vidas: '+vidas,10,30);
   text('nivel: '+nivel,200,30)
@@ -69,7 +70,9 @@ if(tela==2){
   for(i=1;i<=qtdObjetos;i++){
   ellipse(vxi[i],vyi[i],2*raioO,2*raioO)
   }
+  fill(79, 73, 73)
    ellipse(x,y,1*raioP,1*raioP)
+  fill(255, 255, 255)
    anima=imgsAndando[contFrame];
   noStroke()
   imageMode(CENTER)
@@ -91,19 +94,19 @@ if ( keyIsDown(CONTROL) ){
 }
 if ( keyIsDown(RIGHT_ARROW) )
   {
-    x=x+5
+    x=x+6
   }
    if ( keyIsDown(LEFT_ARROW) )
   {
-    x=x-5
+    x=x-6
   }
   if ( keyIsDown(UP_ARROW) )
   {
-    y=y-5
+    y=y-6
   }
     if ( keyIsDown(DOWN_ARROW) )
   {
-    y=y+5
+    y=y+6
   }
    ellipse(xd,yd,1*raioD,1*raioD)
   if ( keyIsDown(CONTROL) && ! estadoDisparo)
@@ -115,7 +118,7 @@ if ( keyIsDown(RIGHT_ARROW) )
 
 if( estadoDisparo ) {
   ellipse(xd,yd,1*raioD,1*raioD)
-  xd=xd+13;
+  xd=xd+15;
 }
   if(xd > 400)
   {
@@ -271,16 +274,16 @@ if( estadoDisparo ) {
    
    for(i=1;i<qtdObjetosn2;i++){
      ellipse(xin2[i],yin2[i],20,20)}
-   yin2[1]=yin2[1]-15
-    yin2[2]=yin2[2]-5
-     yin2[3]=yin2[3]-10
-      yin2[4]=yin2[4]-7
-       yin2[5]=yin2[5]-5
-        yin2[6]=yin2[6]-15
-         yin2[7]=yin2[7]-6
-          yin2[8]=yin2[8]-10
-           yin2[9]=yin2[9]-6
-            yin2[10]=yin2[10]-5
+   yin2[1]=yin2[1]-18
+    yin2[2]=yin2[2]-8
+     yin2[3]=yin2[3]-11
+      yin2[4]=yin2[4]-8
+       yin2[5]=yin2[5]-8
+        yin2[6]=yin2[6]-18
+         yin2[7]=yin2[7]-8
+          yin2[8]=yin2[8]-11
+           yin2[9]=yin2[9]-8
+            yin2[10]=yin2[10]-8
    if(yin2[1]<50){
      yin2[1]=400}
      if(yin2[1]<50){
@@ -443,28 +446,16 @@ if(xd>20){
   if(vidasif<=0){
     tela=5
 }
-  if(tempo>4000){
+  if(tempo>1800){
     tela=3}
 }
   if(tela==5){
-    background(255, 10, 0);
+    background(255, 221, 0);
     textSize(30);
     text("PARABENS,VOCE GANHOU!!!!",10,200)
     textSize(10)
   }
 }
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
   
   
   
